@@ -8,7 +8,7 @@ namespace LinkedListProblem
         {
             Console.WriteLine("Welcome to Linked List Problem");
             Console.WriteLine("\n1.CreateLinkedList \n2.AddFirstLinkedList \n3.AppendLinkedList \n4.InsertLinkedList \n5.DeleteFirstElement" +
-                             "\n6.DeleteLastElement");
+                             "\n6.DeleteLastElement \n7.SearchNodeElement");
             LinkedList list = new LinkedList();
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -58,6 +58,14 @@ namespace LinkedListProblem
                     list.Display();
                     list.RemoveLastNode();
                     Console.WriteLine("Remove last node from linked list ");
+                    list.Display();
+                    break;
+                case 7:
+                    Console.WriteLine("Search Linked List to find node ");
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Search(30);
                     list.Display();
                     break;
                 default:
