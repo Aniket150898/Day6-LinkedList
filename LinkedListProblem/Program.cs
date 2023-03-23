@@ -8,7 +8,7 @@ namespace LinkedListProblem
         {
             Console.WriteLine("Welcome to Linked List Problem");
             Console.WriteLine("\n1.CreateLinkedList \n2.AddFirstLinkedList \n3.AppendLinkedList \n4.InsertLinkedList \n5.DeleteFirstElement" +
-                             "\n6.DeleteLastElement \n7.SearchNodeElement \n8.InsertNodeLinkedList");
+                             "\n6.DeleteLastElement \n7.SearchNodeElement \n8.InsertNodeLinkedList \n9.DeleteElementAndFindSize");
             LinkedList list = new LinkedList();
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -77,6 +77,18 @@ namespace LinkedListProblem
                     list.InsertAtParticularPosition(3, 40);
                     Console.WriteLine("After inserting the element");
                     list.Display();
+                    break;
+                case 9:
+                    Console.WriteLine("Delete the element and find Size of the linked list ");
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(40);
+                    list.Append(70);
+                    list.Size();
+                    list.Delete(40);
+                    Console.WriteLine("After removing an element");
+                    list.Display();
+                    list.Size();
                     break;
                 default:
                     Console.WriteLine("Please enter correct option ");

@@ -122,6 +122,40 @@ namespace LinkedListProblem
                 Console.WriteLine("Given value: " + value + " is not present in Linked list");
         }
 
+        //delete the given element from linkedlist
+        internal void Delete(int data)
+        {
+            Node temp = head;
+            if (head == null)
+            {
+                Console.WriteLine("Linked List is empty");
+                return;
+            }
+            while (temp.next != null)
+            {
+                if (temp.next.data == data)
+                {
+                    temp.next = temp.next.next;
+                    Console.WriteLine("Element is delted from the linked list");
+                }
+                temp = temp.next;
+            }
+        }
+
+        //implementing the size of linked list
+        internal void Size()
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("The size of linked list is " + count);
+        }
+
+
         //displaying the data from linked list
         internal void Display()
         {
