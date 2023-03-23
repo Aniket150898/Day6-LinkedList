@@ -7,7 +7,7 @@ namespace LinkedListProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Linked List Problem");
-            Console.WriteLine("\n1.CreateLinkedList \n2.AddFirstLinkedList \n3.AppendLinkedList");
+            Console.WriteLine("\n1.CreateLinkedList \n2.AddFirstLinkedList \n3.AppendLinkedList \n4.InsertLinkedList ");
             LinkedList list = new LinkedList();
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -31,6 +31,13 @@ namespace LinkedListProblem
                     list.Append(56);
                     list.Append(30);
                     list.Append(70);
+                    list.Display();
+                    break;
+                case 4:
+                    Console.WriteLine("Insert Data in Linked List at specific index");
+                    list.Append(56);
+                    list.Append(70);
+                    list.InsertAtParticularPosition(2, 30);
                     list.Display();
                     break;
                 default:
