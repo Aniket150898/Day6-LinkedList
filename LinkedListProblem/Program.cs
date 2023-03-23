@@ -8,7 +8,7 @@ namespace LinkedListProblem
         {
             Console.WriteLine("Welcome to Linked List Problem");
             Console.WriteLine("\n1.CreateLinkedList \n2.AddFirstLinkedList \n3.AppendLinkedList \n4.InsertLinkedList \n5.DeleteFirstElement" +
-                             "\n6.DeleteLastElement \n7.SearchNodeElement");
+                             "\n6.DeleteLastElement \n7.SearchNodeElement \n8.InsertNodeLinkedList");
             LinkedList list = new LinkedList();
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -66,6 +66,16 @@ namespace LinkedListProblem
                     list.Append(30);
                     list.Append(70);
                     list.Search(30);
+                    list.Display();
+                    break;
+                case 8:
+                    Console.WriteLine("Insert Node After Searching linked list");
+                    list.Append(56);
+                    list.Append(30);
+                    list.Append(70);
+                    list.Search(30);
+                    list.InsertAtParticularPosition(3, 40);
+                    Console.WriteLine("After inserting the element");
                     list.Display();
                     break;
                 default:
